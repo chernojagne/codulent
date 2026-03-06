@@ -9,16 +9,16 @@ draft: false
 
 ## The Challenge
 
-A B2B SaaS company with 2,000+ customers was receiving hundreds of support, sales, and partnership emails daily — all funneled into shared inboxes. Critical customer issues were getting buried, response times were inconsistent, and the team had no reliable way to prioritize incoming messages.
+A B2B SaaS company with 2,000+ customers was receiving hundreds of support, sales, and partnership emails daily - all funneled into shared inboxes. Critical customer issues were getting buried, response times were inconsistent, and the team had no reliable way to prioritize incoming messages.
 
 ## Our Approach
 
 After mapping their email workflows and categorization needs, we configured an OpenClaw-based automation pipeline:
 
-- **Incoming email classification** — AI reads each message and categorizes it by type (support, sales inquiry, billing, partnership, spam)
-- **Priority scoring** — urgent issues (outages, billing disputes, churn risk) are flagged immediately
-- **Smart routing** — emails are automatically forwarded to the right team or individual based on content and urgency
-- **Auto-responses** — common questions receive instant, accurate replies with links to documentation
+- **Incoming email classification** - AI reads each message and categorizes it by type (support, sales inquiry, billing, partnership, spam)
+- **Priority scoring** - urgent issues (outages, billing disputes, churn risk) are flagged immediately
+- **Smart routing** - emails are automatically forwarded to the right team or individual based on content and urgency
+- **Auto-responses** - common questions receive instant, accurate replies with links to documentation
 
 ## The Results
 

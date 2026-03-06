@@ -9,7 +9,7 @@ draft: false
 
 ## The Challenge
 
-A mid-size logistics company in Texas was processing over 500 invoices per week manually. Their accounts payable team spent roughly 30 hours per week on data entry — keying invoice details into their ERP, matching POs, and flagging discrepancies. Errors were common, payments were delayed, and the team was overwhelmed.
+A mid-size logistics company in Texas was processing over 500 invoices per week manually. Their accounts payable team spent roughly 30 hours per week on data entry - keying invoice details into their ERP, matching POs, and flagging discrepancies. Errors were common, payments were delayed, and the team was overwhelmed.
 
 ## Our Approach
 
