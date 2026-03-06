@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const caseStudies = (await getCollection('case-studies'))
+  .filter((study) => !study.data.draft)
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+---
+
+<BaseLayout
+  title="Case Studies — Codulent AI Automation Consulting"
+  description="See how Codulent has helped businesses automate operations, reduce costs, and scale with AI. Real results from real clients."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-accent-400 font-semibold text-sm tracking-wide uppercase mb-4">Case Studies</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-white">
+        Real results from real businesses
+      </h1>
+      <p class="mt-6 text-lg text-slate-300 max-w-2xl mx-auto">
+        See how we've helped companies automate operations, cut costs, and regain focus on what matters most.
+      </p>
+    </div>
+  </section>
+
+  <!-- Case Studies Grid -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {caseStudies.map((study) => (
+          <a
+            href={`/case-studies/${study.id.replace(/\.md$/, '')}`}
+            class="group block rounded-2xl border border-slate-200 bg-white overflow-hidden hover:shadow-lg hover:border-accent-300 transition-all"
+          >
+            <div class="p-8">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-navy-100 text-navy-700 mb-4">
+                {study.data.industry}
+              </span>
+              <h2 class="text-xl font-bold text-navy-900 group-hover:text-accent-700 transition-colors mb-3">
+                {study.data.title}
+              </h2>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                {study.data.summary}
+              </p>
+              <div class="flex items-center gap-2 text-accent-700 font-semibold text-sm">
+                <svg class="w-5 h-5 text-accent-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+                </svg>
+                {study.data.outcome}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold text-navy-900 mb-4">
+        Want results like these for your business?
+      </h2>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg bg-navy-700 text-white font-semibold hover:bg-navy-800 transition-colors"
+      >
+        Book a Free Discovery Call
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id.replace(/\.md$/, '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={`${post.data.title} — Codulent Blog`}
+  description={post.data.excerpt}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <a
+        href="/blog"
+        class="inline-flex items-center text-accent-400 text-sm font-medium hover:text-accent-300 transition-colors mb-6"
+      >
+        <svg class="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        </svg>
+        Back to Blog
+      </a>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-navy-700 text-accent-300">
+          {post.data.category}
+        </span>
+        <span class="text-sm text-slate-400">
+          {post.data.publishDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
+        </span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+        {post.data.title}
+      </h1>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <article class="prose prose-lg prose-slate max-w-none prose-headings:text-navy-900 prose-a:text-accent-700 prose-strong:text-navy-800">
+        <Content />
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold text-navy-900 mb-4">
+        Want to explore AI automation for your business?
+      </h2>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg bg-navy-700 text-white font-semibold hover:bg-navy-800 transition-colors"
+      >
+        Book a Free Discovery Call
+      </a>
+    </div>
+  </section>
+</BaseLayout>

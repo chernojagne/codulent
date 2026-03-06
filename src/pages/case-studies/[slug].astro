@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const caseStudies = await getCollection('case-studies');
+  return caseStudies.map((study) => ({
+    params: { slug: study.id.replace(/\.md$/, '') },
+    props: { study },
+  }));
+}
+
+const { study } = Astro.props;
+const { Content } = await render(study);
+---
+
+<BaseLayout
+  title={`${study.data.title} — Codulent Case Study`}
+  description={study.data.summary}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <a
+        href="/case-studies"
+        class="inline-flex items-center text-accent-400 text-sm font-medium hover:text-accent-300 transition-colors mb-6"
+      >
+        <svg class="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+        </svg>
+        Back to Case Studies
+      </a>
+      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-navy-700 text-slate-300 mb-4">
+        {study.data.industry}
+      </span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+        {study.data.title}
+      </h1>
+      <div class="mt-6 flex items-center gap-3">
+        <div class="flex items-center gap-2 text-accent-400 font-semibold">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+          </svg>
+          {study.data.outcome}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <article class="prose prose-lg prose-slate max-w-none prose-headings:text-navy-900 prose-a:text-accent-700 prose-strong:text-navy-800 prose-blockquote:border-accent-400 prose-blockquote:text-slate-600">
+        <Content />
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold text-navy-900 mb-4">
+        Ready for similar results?
+      </h2>
+      <p class="text-slate-600 mb-6">Let's discuss how AI automation can transform your operations.</p>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg bg-navy-700 text-white font-semibold hover:bg-navy-800 transition-colors"
+      >
+        Book a Free Discovery Call
+      </a>
+    </div>
+  </section>
+</BaseLayout>
