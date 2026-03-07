@@ -1,8 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.20833 185.20833" width="32" height="32">
-  <g transform="translate(-62.80303,-53.578079)">
-    <path fill="#444444" d="M 120.13866,68.273933 77.24731,142.35727 v 0 l 77.50838,3e-5 42.77204,-74.083358 z"/>
-    <path fill="#ff6600" d="m 201.48805,75.133339 32.07903,55.562511 -64.15809,-1e-5 z"/>
-    <path fill="#444444" d="M 120.13866,224.09055 77.24731,150.00721 v 0 l 77.50838,-3e-5 42.77204,74.08336 z"/>
-    <path fill="#000000" d="m 201.48805,217.23114 32.07903,-55.56251 -64.15809,1e-5 z"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#1e3460"/>
+  <text x="16" y="22" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#3395ff" text-anchor="middle">C</text>
 </svg>

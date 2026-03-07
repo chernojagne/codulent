@@ -19,11 +19,12 @@ const currentPath = Astro.url.pathname;
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2.5 shrink-0" aria-label="Codulent Home">
-        <img src="/logo.svg" alt="Codulent" class="h-8 w-8" />
-        <span class="text-2xl font-extrabold tracking-tight text-navy-800">
-          Codulent
-        </span>
+      <a href="/" class="flex items-center gap-3 shrink-0" aria-label="Codulent Home">
+        <div class="flex items-center">
+          <span class="text-2xl font-extrabold tracking-tight text-navy-800">
+            Codulent
+          </span>
+        </div>
       </a>
 
       <!-- Desktop Nav -->
@@ -42,10 +43,10 @@ const currentPath = Astro.url.pathname;
           </a>
         ))}
         <a
-          href="/contact"
+          href="/book"
           class="ml-3 inline-flex items-center px-4 py-2 rounded-lg bg-navy-700 text-white text-sm font-semibold hover:bg-navy-800 transition-colors"
         >
-          Get Started
+          Book Assessment
         </a>
       </nav>
 
@@ -86,10 +87,10 @@ const currentPath = Astro.url.pathname;
         </a>
       ))}
       <a
-        href="/contact"
+        href="/book"
         class="block mt-3 text-center px-4 py-2.5 rounded-lg bg-navy-700 text-white text-base font-semibold hover:bg-navy-800 transition-colors"
       >
-        Get Started
+        Book Assessment
       </a>
     </nav>
   </div>

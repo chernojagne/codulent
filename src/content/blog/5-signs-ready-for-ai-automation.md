@@ -38,4 +38,4 @@ This one's simple. If other companies in your industry are automating and you're
 
 If you recognized your business in two or more of these signs, you're a strong candidate for AI automation. The best first step is a structured assessment of your workflows to identify where automation will deliver the biggest impact.
 
-At Codulent, we offer a [free discovery call](/contact) to help you evaluate your readiness and outline a practical path forward. No pressure, no jargon - just an honest conversation about what AI can and can't do for your business.
+At Codulent, we offer a [free assessment](/book) to help you evaluate your readiness and outline a practical path forward. No pressure, no jargon - just an honest conversation about what AI can and can't do for your business.

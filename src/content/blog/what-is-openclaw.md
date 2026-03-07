@@ -44,4 +44,4 @@ We handle the entire process:
 
 OpenClaw isn't a magic bullet - it's a powerful tool that, when configured properly, can save your team hours every day. The key is having an experienced partner who can set it up right.
 
-If you're curious whether OpenClaw is a fit for your business, [book a free discovery call](/contact) and we'll walk you through the possibilities.
+If you're curious whether OpenClaw is a fit for your business, [book a free assessment](/book) and we'll walk you through the possibilities.
