@@ -1,4 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#1e3460"/>
-  <text x="16" y="22" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#3395ff" text-anchor="middle">C</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  width="700"
+  height="700"
+  viewBox="0 0 185.20833 185.20833"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg">
+  <g transform="translate(-62.80303,-53.578079)">
+    <path
+      style="fill:#444444;fill-opacity:1;stroke:#444444;stroke-width:3.175;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+      d="M 120.13866,68.273933 77.24731,142.35727 v 0 l 77.50838,3e-5 42.77204,-74.083358 z" />
+    <path
+      style="fill:#ff6600;stroke:#ff6600;stroke-width:3.175;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+      d="m 201.48805,75.133339 32.07903,55.562511 -64.15809,-1e-5 z" />
+    <path
+      style="fill:#444444;fill-opacity:1;stroke:#444444;stroke-width:3.175;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+      d="M 120.13866,224.09055 77.24731,150.00721 v 0 l 77.50838,-3e-5 42.77204,74.08336 z" />
+    <path
+      style="fill:#999999;stroke:#999999;stroke-width:3.175;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+      d="m 201.48805,217.23114 32.07903,-55.56251 -64.15809,1e-5 z" />
+  </g>
 </svg>
