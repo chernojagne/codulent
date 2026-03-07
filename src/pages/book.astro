@@ -6,6 +6,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="Book a Free Assessment - Codulent AI Automation"
   description="Schedule a free assessment with Codulent. We'll review your workflows and show you where AI automation can save time and money."
 >
+  <!-- Calendly CSS + JS -->
+  <link slot="head" href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+
   <!-- Hero -->
   <section class="bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -61,7 +64,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
-</BaseLayout>
 
-<!-- Calendly widget script -->
-<script is:inline src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- Calendly widget script -->
+  <script is:inline src="https://assets.calendly.com/assets/external/widget.js"></script>
+</BaseLayout>
